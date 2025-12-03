@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LaunchHub</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+/* 🟦 LOAD YOUR CUSTOM FONT (Hamston.ttf must be next to this HTML file) */
+@font-face {
+  font-family: 'Hamston';
+  src: url('Hamston.ttf');
+}
+
+/* 🟦 PAGE BACKGROUND + LAYOUT */
+body{
+  margin:0;
+  min-height:100vh;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  background:linear-gradient(135deg,#180f40,#0b002e);
+  font-family:system-ui;
+  padding:20px 10px 40px;
+  box-sizing:border-box;
+}
+
+/* 🟦 LOGO + TITLE AREA */
+.header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border:3px solid rgba(255,255,255,0.7);
+  box-shadow:0 0 25px rgba(255,255,255,0.7);
+  animation:pulseGlow 2.2s ease-in-out infinite alternate;
+}
+
+/* Logo glow animation */
+@keyframes pulseGlow {
+  from {
+    box-shadow:0 0 18px rgba(255,255,255,0.6);
+    transform:scale(1);
+  }
+  to {
+    box-shadow:0 0 32px rgba(173,208,255,0.95);
+    transform:scale(1.04);
+  }
+}
+
+/* 🟦 THE TITLE USING YOUR HAMSTON FONT */
+.title {
+  font-family: 'Hamston';   /* <-- CUSTOM FONT APPLIED HERE */
+  font-size: 48px;
+  font-weight: 700;
+  margin-top: 15px;
+  letter-spacing: 3px;
+  background: linear-gradient(90deg,#7dd6ff,#c499ff);
+  -webkit-background-clip: text;
+  color: transparent;
+  text-shadow:0 0 25px rgba(150,150,255,0.7);
+}
+
+/* 🟦 GRID FOR BUTTONS */
+.container{
+  display:grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap:16px;
+  width:100%;
+  max-width:450px; /* perfect phone width */
+}
+
+/* 🟦 BUTTON STYLE */
+.btn{
+  padding:14px;
+  border-radius:15px;
+  font-size:15px;
+  text-decoration:none;
+  font-weight:600;
+  letter-spacing:0.5px;
+  text-align:center;
+  color:#fff;
+
+  background:linear-gradient(135deg,
+    rgba(110,160,255,0.25),
+    rgba(200,150,255,0.12)
+  );
+
+  border:1px solid rgba(255,255,255,0.3);
+  backdrop-filter:blur(18px);
+  -webkit-backdrop-filter:blur(18px);
+
+  box-shadow:0 0 25px rgba(110,160,255,0.3),
+              inset 0 0 6px rgba(255,255,255,0.5);
+
+  transition:0.25s;
+}
+
+.btn:hover{
+  transform:translateY(-4px) scale(1.05);
+  box-shadow:0 0 35px rgba(150,180,255,0.9);
+  border-color:rgba(255,255,255,0.7);
+}
+
+/* 🟦 FOOTER */
+.footer{
+  margin-top:35px;
+  font-size:12px;
+  color:rgba(255,255,255,0.6);
+}
+
+/* 🟦 MOBILE VIEW — 2 columns */
+@media (max-width: 700px){
+  .container{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap:14px;
+  }
+  .btn{
+    padding:12px 18px;
+    font-size:14px;
+  }
+  .title{
+    font-size:34px;
+    letter-spacing:2px;
+  }
+  .logo{
+    width:110px;
+    height:110px;
+  }
+}
+
+</style>
+</head>
+<body>
+
+<!-- LOGO + TITLE -->
+<div class="header">
+  <img src="https://i.postimg.cc/CMP8YCtK/Untitled146-20251203110125.jpg" class="logo">
+  <h1 class="title">LaunchHub</h1>
+</div>
+
+<!-- BUTTON GRID -->
+<div class="container">
+  <a href="https://lmarena.ai/c/6b5d5f26-fee2-4a45-82bd-35756b3e0526" class="btn" target="_blank">Lm Arena</a>
+  <a href="https://remove.photos/" class="btn" target="_blank">Remove Bg</a>
+  <a href="https://www.songpeel.com/add-reverb-to-audio" class="btn" target="_blank">Reverb Adder</a>
+  <a href="https://vocalremover.org/" class="btn" target="_blank">Vocal Remove</a>
+  <a href="https://discord.com/" class="btn" target="_blank">Discord</a>
+  <a href="https://app.leonardo.ai/image-generation" class="btn" target="_blank">AI Image</a>
+  <a href="https://elevenlabs.io/app/speech-synthesis/text-to-speech" class="btn" target="_blank">11 Labs</a>
+  <a href="https://deepwebnest.com/" class="btn" target="_blank">Deep Web Nest</a>
+  <a href="https://emojicombos.com/rules" class="btn" target="_blank">Special Font</a>
+  <a href="https://featurepoints.com/" class="btn" target="_blank">Feature Point</a>
+  <a href="https://www.fineshare.com/" class="btn" target="_blank">Voice Changer</a>
+  <a href="https://tinywow.com/" class="btn" target="_blank">Tiny Wow</a>
+  <a href="https://www.1001freefonts.com/old-school-fonts.php" class="btn" target="_blank">Discover Fonts</a>
+  <a href="https://www.myfonts.com/pages/whatthefont" class="btn" target="_blank">Font Finder</a>
+  <a href="https://ytcutter.link/" class="btn" target="_blank">YT Clips</a>
+  <a href="https://diveo.io/" class="btn" target="_blank">Subtitles</a>
+  <a href="https://animeclips.online/home/" class="btn" target="_blank">Anime Clips</a>
+  <a href="https://www.youtube.com/" class="btn" target="_blank">YouTube</a>
+  <a href="https://www.google.com/" class="btn" target="_blank">Search</a>
+  <a href="#" class="btn" target="_blank">Coming Soon</a>
+</div>
+
+<div class="footer">
+  Made with Love by RAJESWAR 
+</div>
+
+</body>
+</html>
